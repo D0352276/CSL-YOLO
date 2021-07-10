@@ -26,10 +26,13 @@ Paper Link: coming soon.
 ```bash
 #Predict
 python3 main.py -p cfg/predict_coco.cfg
+
 #Train
 python3 main.py -p cfg/train_coco.cfg
+
 #Eval
 python3 main.py -ce cfg/eval_coco.cfg
+
 #Camera DEMO
 python3 main.py -d cfg/demo_coco.cfg
 ```
