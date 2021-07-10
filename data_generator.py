@@ -91,8 +91,11 @@ class DataGenerator:
         norm_h=h/output_hw[0]
         wht=true_bbox[4]
         labels=true_bbox[5:]
+
+
         int_x=np.floor(x).astype('int')
         int_y=np.floor(y).astype('int')
+
         iou_list=list(map(lambda anchor:IOU([x,y,w,h],[int_x,int_y,anchor[0],anchor[1]]),anchors))
         for anchor_idx,iou in enumerate(iou_list):
             if(iou>iou_thres):

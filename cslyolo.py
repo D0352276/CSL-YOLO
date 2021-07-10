@@ -333,7 +333,7 @@ class CSLLoss(tf.Module):
         coord_loss_scale=2-true_wh[...,0]*true_wh[...,1]
 
         xy_loss=tf.keras.backend.binary_crossentropy(box_for_fit_true[...,:2],box_for_fit_pred[...,:2])
-        
+
         #smooth l1
         huber_delta=0.5
         wh_loss=tf.math.abs(box_for_fit_true[...,2:]-box_for_fit_pred[...,2:])
@@ -385,10 +385,10 @@ class CSLLoss(tf.Module):
 
             iou_loss=self._CIoU(true_y,pred_y,true_mask,true_wht)
             coord_loss=self._BboxesLoss(true_y,pred_y,true_mask,true_wht)
-            # cnfd_loss=self._ConfidenceLoss(pred_y,true_mask,ignore_mask,true_wht)
+            cnfd_loss_1=self._ConfidenceLoss(pred_y,true_mask,ignore_mask,true_wht)
             cnfd_loss=self._ConfidenceFocalLoss(pred_y,true_mask,ignore_mask,true_wht)
             classes_loss=self._ClassesLoss(true_y,pred_y,true_mask,true_wht)
 
-            loss=iou_loss+coord_loss+cnfd_loss+classes_loss
+            loss=iou_loss+coord_loss+cnfd_loss_1+cnfd_loss+classes_loss
             return loss
         return _CSLLoss

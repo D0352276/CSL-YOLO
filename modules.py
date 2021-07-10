@@ -263,7 +263,7 @@ class InputBIFusion(tf.Module):
         output_ts=self._cslm(x)
         return output_ts
 
-class _FusionPhase1(tf.Module):
+class FusionPhase1(tf.Module):
     def __init__(self,name="fusionphase1"):
         super(FusionPhase1,self).__init__(name=name)
         self._name=name
@@ -296,38 +296,7 @@ class _FusionPhase1(tf.Module):
         l4=self._l4_cslm(l4)
         return [l1,l2,l3,l4,l5]
 
-class FusionPhase1(tf.Module):
-    def __init__(self,name="fusionphase1"):
-        super(FusionPhase1,self).__init__(name=name)
-        self._name=name
-    @tf.Module.with_name_scope
-    def _Build(self,l2_shape,l4_shape):
-        l2_shape=np.array(l2_shape)
-        l4_shape=np.array(l4_shape)
-        self._l1_to_l2=AdaptAvgPooling(l2_shape[0:2],name=self._name+"_l1_to_l2")
-        self._l1_to_l4=AdaptAvgPooling(l4_shape[0:2],name=self._name+"_l1_to_l4")
-        self._l3_to_l2=AdaptUpsample(l2_shape[0:2],name=self._name+"_l3_to_l2")
-        self._l3_to_l4=AdaptAvgPooling(l4_shape[0:2],name=self._name+"_l3_to_l4")
-        self._l5_to_l2=AdaptUpsample(l2_shape[0:2],name=self._name+"_l5_to_l2")
-        self._l5_to_l4=AdaptUpsample(l4_shape[0:2],name=self._name+"_l5_to_l4")
-
-        self._l2_cslm=CSLModule(filters=l2_shape[2],t=2,use_se=True,activation=mish,name=self._name+"_l2_cslm")
-        self._l4_cslm=CSLModule(filters=l4_shape[2],t=2,use_se=True,activation=mish,name=self._name+"_l4_cslm")
-    @tf.Module.with_name_scope
-    def __call__(self,input_ts_list):
-        l1,l2,l3,l4,l5=input_ts_list
-        l2_shape=l2.get_shape().as_list()[1:]
-        l4_shape=l4.get_shape().as_list()[1:]
-        self._Build(l2_shape,l4_shape)
-        
-        l2=l2+self._l1_to_l2(l1)+self._l3_to_l2(l3)+self._l5_to_l2(l5)
-        l2=self._l2_cslm(l2)
-
-        l4=l4+self._l1_to_l4(l1)+self._l3_to_l4(l3)+self._l5_to_l4(l5)
-        l4=self._l4_cslm(l4)
-        return [l1,l2,l3,l4,l5]
-
-class _FusionPhase2(tf.Module):
+class FusionPhase2(tf.Module):
     def __init__(self,name="fusionphase2"):
         super(FusionPhase2,self).__init__(name=name)
         self._name=name
@@ -367,45 +336,6 @@ class _FusionPhase2(tf.Module):
         l5=self._l5_cslm(l5)
         return [l1,l2,l3,l4,l5]
 
-class FusionPhase2(tf.Module):
-    def __init__(self,name="fusionphase2"):
-        super(FusionPhase2,self).__init__(name=name)
-        self._name=name
-    @tf.Module.with_name_scope
-    def _Build(self,l1_shape,l3_shape,l5_shape):
-        l1_shape=np.array(l1_shape)
-        l3_shape=np.array(l3_shape)
-        l5_shape=np.array(l5_shape)
-
-        self._l2_to_l1=AdaptUpsample(l1_shape[0:2],name=self._name+"_l2_to_l1")
-        self._l2_to_l3=AdaptAvgPooling(l3_shape[0:2],name=self._name+"_l2_to_l3")
-        self._l2_to_l5=AdaptAvgPooling(l5_shape[0:2],name=self._name+"_l2_to_l5")
-
-        self._l4_to_l1=AdaptUpsample(l1_shape[0:2],name=self._name+"_l4_to_l1")
-        self._l4_to_l3=AdaptUpsample(l3_shape[0:2],name=self._name+"_l4_to_l3")
-        self._l4_to_l5=AdaptAvgPooling(l5_shape[0:2],name=self._name+"_l4_to_l5")
-
-    
-        self._l1_cslm=CSLModule(filters=l1_shape[2],t=2,use_se=True,activation=mish,name=self._name+"_l1_cslm")
-        self._l3_cslm=CSLModule(filters=l3_shape[2],t=2,use_se=True,activation=mish,name=self._name+"_l3_cslm")
-        self._l5_cslm=CSLModule(filters=l5_shape[2],t=2,use_se=True,activation=mish,name=self._name+"_l5_cslm")
-    @tf.Module.with_name_scope
-    def __call__(self,input_ts_list):
-        l1,l2,l3,l4,l5=input_ts_list
-        l1_shape=l1.get_shape().as_list()[1:]
-        l3_shape=l3.get_shape().as_list()[1:]
-        l5_shape=l5.get_shape().as_list()[1:]
-        self._Build(l1_shape,l3_shape,l5_shape)
-
-        l1=l1+self._l2_to_l1(l2)+self._l4_to_l1(l4)
-        l1=self._l1_cslm(l1)
-
-        l3=l3+self._l2_to_l3(l2)+self._l4_to_l3(l4)
-        l3=self._l3_cslm(l3)
-
-        l5=l5+self._l2_to_l5(l2)+self._l4_to_l5(l4)
-        l5=self._l5_cslm(l5)
-        return [l1,l2,l3,l4,l5]
 
 class CSLFPN(tf.Module):
     def __init__(self,repeat=3,name="cslfpn"):
