@@ -81,4 +81,7 @@ The bounding boxes contained in a picture are represented by single json file.
 For detailed format, please refer to the json file in "data/coco/train/json".
 
 ### AP Performance on MS-COCO
+
+For detailed COCO report, please refer to mscoco_result.
+
 <img src=https://github.com/D0352276/CSL-YOLO/blob/main/demo/result_table.png width=100% />
