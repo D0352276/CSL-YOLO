@@ -8,6 +8,8 @@ This project provides a SOTA level lightweight YOLO called "Cross-Stage Lightwei
 
 it is achieving better detection performance with only 43% FLOPs and 52% parameters than Tiny-YOLOv4.
 
+Paper Link: coming soon.
+
 <div align=center>
 <img src=https://github.com/D0352276/CSL-YOLO/blob/main/demo/result_img_1.png width=100% />
 </div>
