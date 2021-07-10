@@ -33,10 +33,8 @@ python3 main.py -d cfg/demo_coco.cfg
 
 ## More Info
 
-### Change Scale
-The model's default size is 224x224,
-
-if you want to change the size of 320~512, 
+### Change Model Scale
+The model's default size is 224x224, if you want to change the size of 320~512, 
 
 please go to cfg/XXXX.cfg and change the following two parts:
 ```bash
