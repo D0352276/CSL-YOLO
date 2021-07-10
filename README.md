@@ -32,4 +32,41 @@ python3 main.py -d cfg/demo_coco.cfg
 
 
 ## More Info
+
+### Change Scale
+The model's default size is 224x224,
+
+if you want to change the size of 320~512, 
+
+please go to cfg/XXXX.cfg and change the following two parts:
+```bash
+# input_shape=[512,512,3]
+# out_hw_list=[[64,64],[48,48],[32,32],[24,24],[16,16]]
+# input_shape=[416,416,3]
+# out_hw_list=[[52,52],[39,39],[26,26],[20,20],[13,13]]
+# input_shape=[320,320,3]
+# out_hw_list=[[40,40],[30,30],[20,20],[15,15],[10,10]]
+input_shape=[224,224,3]
+out_hw_list=[[28,28],[21,21],[14,14],[10,10],[7,7]]
+
+weight_path=weights/224_nolog.hdf5
+
+                         |
+                         | 224 to 320
+                         V
+                         
+# input_shape=[512,512,3]
+# out_hw_list=[[64,64],[48,48],[32,32],[24,24],[16,16]]
+# input_shape=[416,416,3]
+# out_hw_list=[[52,52],[39,39],[26,26],[20,20],[13,13]]
+input_shape=[320,320,3]
+out_hw_list=[[40,40],[30,30],[20,20],[15,15],[10,10]]
+# input_shape=[224,224,3]
+# out_hw_list=[[28,28],[21,21],[14,14],[10,10],[7,7]]
+
+weight_path=weights/320_nolog.hdf5
+```
+
+### Fully Dataset
+
 <img src=https://github.com/D0352276/CSL-YOLO/blob/main/demo/result_table.png width=100% />
