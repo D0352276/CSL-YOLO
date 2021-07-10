@@ -74,7 +74,7 @@ The entire MS-COCO data set is too large, here only a few pictures are stored fo
 
 if you need complete data, please go to the official website to download:
 
-- [Python 3](https://cocodataset.org/#download)
+[MS-COCO](https://cocodataset.org/#download)
 
 ### Our Data Format
 We did not use the official format of MSCOCO, we expressed a bounding box as following:
