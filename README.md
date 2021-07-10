@@ -16,7 +16,7 @@ Paper Link: coming soon.
 
 ## Requirements
 
-- [Tensorflow 2](https://www.tensorflow.org/)
+- [TensorFlow 2](https://www.tensorflow.org/)
 - [Numpy](http://www.numpy.org/)
 - [h5py](http://www.h5py.org/)
 - [Python 3](https://www.python.org/)
