@@ -80,6 +80,7 @@ We did not use the official format of MSCOCO, we expressed a bounding box as fol
 [ left_top_x<float>, left_top_y<float>, w<float>, h<float>, confidence<float>, class<str> ]
 ```
 The bounding boxes contained in a picture are represented by single json file.
+
 For detailed format, please refer to the json file in "data/coco/train/json".
 
 ### AP Performance on MS-COCO
