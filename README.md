@@ -19,21 +19,17 @@ it is achieving better detection performance with only 43% FLOPs and 52% paramet
 
 
 ## How to Get Started?
-
-### Predict
 ```bash
+#Predict
 python3 main.py -p cfg/predict_coco.cfg
-```
 
-### Train
-```bash
-python3 main.py -t cfg/train_coco.cfg
-```
+#Train
+python3 main.py -p cfg/predict_coco.cfg
 
-### Eval on MS-COCO
-```bash
+#Eval
 python3 main.py -ce cfg/eval_coco.cfg
 ```
+
 
 ## More Info
 <img src=https://github.com/D0352276/CSL-YOLO/blob/main/demo/result_table.png width=100% />
