@@ -66,5 +66,19 @@ weight_path=weights/320_nolog.hdf5
 ```
 
 ### Fully Dataset
+The entire MS-COCO data set is too large, here only a few pictures are stored for DEMO, 
 
+if you need complete data, please go to the official website to download:
+
+https://cocodataset.org/#download
+
+### Our Data Format
+We did not use the official format of MSCOCO, we expressed a bounding box as following:
+```bash
+[ left_top_x<float>, left_top_y<float>, w<float>, h<float>, confidence<float>, class<str> ]
+```
+The bounding boxes contained in a picture are represented by single json file.
+For detailed format, please refer to the json file in "data/coco/train/json".
+
+### AP Performance on MS-COCO
 <img src=https://github.com/D0352276/CSL-YOLO/blob/main/demo/result_table.png width=100% />
