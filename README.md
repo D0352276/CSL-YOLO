@@ -12,7 +12,7 @@ it is achieving better detection performance with only 43% FLOPs and 52% paramet
 
 ## Requirements
 
-- [Tensorflow2.0](https://www.tensorflow.org/)
+- [Tensorflow2](https://www.tensorflow.org/)
 - [Numpy](http://www.numpy.org/)
 - [h5py](http://www.h5py.org/)
 - [Python 3](https://www.python.org/)
