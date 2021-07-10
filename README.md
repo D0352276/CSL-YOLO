@@ -1,7 +1,7 @@
 # CSL-YOLO: A New Lightweight Object Detection System for Edge Computing
 
-![](https://img.shields.io/badge/python-3-blue)
-![](https://img.shields.io/badge/tensorflow-2-orange)
+![](https://img.shields.io/badge/Python-3-blue)
+![](https://img.shields.io/badge/TensorFlow-2-orange)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
 
 This project provides a SOTA level lightweight YOLO called "Cross-Stage Lightweight YOLO"(CSL-YOLO),
