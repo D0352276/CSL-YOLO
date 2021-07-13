@@ -37,7 +37,7 @@ python3 main.py -ce cfg/eval_coco.cfg
 
 ## Camera DEMO
 
-<img src=https://github.com/D0352276/CSL-YOLO/blob/main/demo/camera_demo.gif width=0% />
+<img src=https://github.com/D0352276/CSL-YOLO/blob/main/demo/camera_demo.gif width=60% />
 
 This DEMO runs on a pure CPU environment, the CPU is I7-6600U(2.6Ghz~3.4Ghz), the model scale is 224x224, and the FPS is about 10.
 
