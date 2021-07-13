@@ -37,6 +37,8 @@ python3 main.py -ce cfg/eval_coco.cfg
 python3 main.py -d cfg/demo_coco.cfg
 ```
 
+## Camera DEMO
+<img src=https://github.com/D0352276/CSL-YOLO/blob/main/demo/camera_demo.gif width=100% />
 
 ## More Info
 
