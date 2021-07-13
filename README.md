@@ -34,17 +34,20 @@ python3 main.py -p cfg/train_coco.cfg
 python3 main.py -ce cfg/eval_coco.cfg
 ```
 
+
 ## Camera DEMO
 
 <img src=https://github.com/D0352276/CSL-YOLO/blob/main/demo/camera_demo.gif width=50% />
 
 This DEMO runs on a pure CPU environment, the CPU is I7-6600U(2.6Ghz~3.4Ghz), the model scale is 224x224, and the FPS is about 10.
 
-Please enter the following command to get this DEMO, the "camera_idx" in the cfg file represents the camera number you specified.
+Please execute the following script to get this DEMO, the "camera_idx" in the cfg file represents the camera number you specified.
 
 ```bash
+#Camera DEMO
 python3 main.py -d cfg/demo_coco.cfg
 ```
+
 
 ## More Info
 
@@ -80,10 +83,12 @@ out_hw_list=[[40,40],[30,30],[20,20],[15,15],[10,10]]
 weight_path=weights/320_nolog.hdf5
 ```
 
+
 ### Fully Dataset
 The entire MS-COCO data set is too large, here only a few pictures are stored for DEMO, 
 
 if you need complete data, Please download on this [page.](https://cocodataset.org/#download)
+
 
 ### Our Data Format
 We did not use the official format of MSCOCO, we expressed a bounding box as following:
@@ -93,6 +98,7 @@ We did not use the official format of MSCOCO, we expressed a bounding box as fol
 The bounding boxes contained in a picture are represented by single json file.
 
 For detailed format, please refer to the json file in "data/coco/train/json".
+
 
 ### AP Performance on MS-COCO
 
