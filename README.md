@@ -32,13 +32,19 @@ python3 main.py -p cfg/train_coco.cfg
 
 #Eval
 python3 main.py -ce cfg/eval_coco.cfg
-
-#Camera DEMO
-python3 main.py -d cfg/demo_coco.cfg
 ```
 
 ## Camera DEMO
+
 <img src=https://github.com/D0352276/CSL-YOLO/blob/main/demo/camera_demo.gif width=50% />
+
+This DEMO runs on a pure CPU environment, the CPU is I7-6600U(2.6Ghz~3.4Ghz), the model scale is 224x224, and the FPS is about 10.
+
+Please enter the following command to get this DEMO, the "camera_idx" in the cfg file represents the camera number you specified.
+
+```bash
+python3 main.py -d cfg/demo_coco.cfg
+```
 
 ## More Info
 
