@@ -105,3 +105,9 @@ For detailed format, please refer to the json file in "data/coco/train/json".
 For detailed COCO report, please refer to "mscoco_result".
 
 <img src=https://github.com/D0352276/CSL-YOLO/blob/main/demo/result_table.png width=100% />
+
+
+## TODOs
+
+- Improve the calculator script of FLOPs.
+- Using Focal Loss will cause overfitting, we need to explore the reasons.
