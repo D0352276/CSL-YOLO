@@ -18,6 +18,7 @@ Paper Link: https://arxiv.org/abs/2107.04829
 
 - [Python 3](https://www.python.org/)
 - [TensorFlow 2](https://www.tensorflow.org/)
+- [OpenCV](https://docs.opencv.org/4.5.2/d6/d00/tutorial_py_root.html)
 - [Numpy](http://www.numpy.org/)
 
 
