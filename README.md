@@ -87,11 +87,11 @@ weight_path=weights/320_nolog.hdf5
 ### Fully Dataset
 The entire MS-COCO data set is too large, here only a few pictures are stored for DEMO, 
 
-if you need complete data, Please download on this [page.](https://cocodataset.org/#download)
+if you need complete data, please download on this [page.](https://cocodataset.org/#download)
 
 
 ### Our Data Format
-We did not use the official format of MSCOCO, we expressed a bounding box as following:
+We did not use the official format of MS-COCO, we expressed a bounding box as following:
 ```bash
 [ left_top_x<float>, left_top_y<float>, w<float>, h<float>, confidence<float>, class<str> ]
 ```
