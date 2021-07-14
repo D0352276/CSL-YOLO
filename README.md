@@ -16,10 +16,9 @@ Paper Link: https://arxiv.org/abs/2107.04829
 
 ## Requirements
 
+- [Python 3](https://www.python.org/)
 - [TensorFlow 2](https://www.tensorflow.org/)
 - [Numpy](http://www.numpy.org/)
-- [h5py](http://www.h5py.org/)
-- [Python 3](https://www.python.org/)
 
 
 ## How to Get Started?
