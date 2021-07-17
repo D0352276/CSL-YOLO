@@ -28,7 +28,7 @@ Paper Link: https://arxiv.org/abs/2107.04829
 python3 main.py -p cfg/predict_coco.cfg
 
 #Train
-python3 main.py -p cfg/train_coco.cfg
+python3 main.py -t cfg/train_coco.cfg
 
 #Eval
 python3 main.py -ce cfg/eval_coco.cfg
