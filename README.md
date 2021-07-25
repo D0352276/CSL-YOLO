@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/TensorFlow-2-orange)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
 
-This project provides a SOTA level lightweight YOLO called "Cross-Stage Lightweight YOLO"(CSL-YOLO),
+This project provides a SOTA level lightweight YOLO called "Cross-Stage Lightweight YOLO"(CSL-YOLO), 
 
 it is achieving better detection performance with only 43% FLOPs and 52% parameters than Tiny-YOLOv4.
 
