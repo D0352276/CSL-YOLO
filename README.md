@@ -1,4 +1,4 @@
-# CSL-YOLO: A New Lightweight Object Detection System for Edge Computing
+# CSL-YOLO: A Cross-Stage Lightweight Object Detector with Low FLOPs
 
 ![](https://img.shields.io/badge/Python-3-blue)
 ![](https://img.shields.io/badge/TensorFlow-2-orange)
