@@ -10,7 +10,8 @@ it is achieving better detection performance with only 43% FLOPs and 52% paramet
 
 This paper has been accepted by IEEE ISCAS 2022.
 
-Paper Link: https://arxiv.org/abs/2107.04829
+Arxiv (v1) Paper Link: https://arxiv.org/abs/2107.04829
+IEEE ISCAS (v2) Paper Link: Coming soon !
 
 <div align=center>
 <img src=https://github.com/D0352276/CSL-YOLO/blob/main/demo/result_img_1.png width=100% />
