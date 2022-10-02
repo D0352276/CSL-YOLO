@@ -10,7 +10,7 @@ it is achieving better detection performance with only 43% FLOPs and 52% paramet
 
 This paper has been accepted by IEEE ISCAS 2022.
 
-Arxiv (v1) Paper Link: https://arxiv.org/abs/2107.04829
+arXiv (v1) Paper Link: https://arxiv.org/abs/2107.04829
 
 IEEE ISCAS (v2) Paper Link: Coming soon !
 
